@@ -40,8 +40,8 @@ class Animal1Main
 		
          Puppy p=new Puppy();
          //access fields and method
-         System.out.println("name soni");
          p.name="soni";
+	 System.out.println("Name is " + p.name);
          p.eat();
          p.sound();
          p.colour();
