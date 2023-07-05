@@ -27,7 +27,7 @@ package oops;
 		 Dog d = new Dog();
 		 //access fields and methods
 		 d.name="soni";
-		 System.out.println(d.name="moti");
+		 System.out.println("Name is " + d.name);
 		 d.eat();
 		 d.sound();
 	 }
