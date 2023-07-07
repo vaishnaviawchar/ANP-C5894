@@ -15,7 +15,7 @@ public class Polymorphism
 	{
 		return a-b;
 	}
-	public int mul(int a, int b)
+	public int mul(int b)
 	{
 		return b*b;
 	}
@@ -34,7 +34,7 @@ class Polymorphism_Main
 		System.out.println("The Substraction is: " +p.sub(100, 79));
 		System.out.println("The Substraction is: " +p.sub(99, 85, 40));
 		System.out.println("The Substraction is: " +p.sub(97.5, 79.2));
-		System.out.println("The Substraction is: " +p.mul(22, 22));
+		System.out.println("The Substraction is: " +p.mul(22));
 		System.out.println("The Substraction is: " +p.mul(33, 66, 21));
 	}
 }
