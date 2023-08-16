@@ -19,7 +19,7 @@ public class AgeChecker
 			int age = Integer.parseInt(sc.nextLine());
 			
 			//if condition to check age is less than zero
-			if(age<0)
+			if(age<=0)
 			{
 				throw new IllegalArgumentException("Please enter a valid age!! Age cannot be negative");
 			}
