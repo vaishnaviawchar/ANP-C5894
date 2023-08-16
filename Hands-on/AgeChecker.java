@@ -21,7 +21,7 @@ public class AgeChecker
 			//if condition to check age is less than zero
 			if(age<=0)
 			{
-				throw new IllegalArgumentException("Please enter a valid age!! Age cannot be negative");
+				throw new IllegalArgumentException("Please enter a valid age!!");
 			}
 			//if condition to check age is less than equal to 18
 		        if(age>=18)
