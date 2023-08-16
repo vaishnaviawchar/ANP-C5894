@@ -58,26 +58,29 @@ public class ArithemeticOperationCalculator
 			//else if condition to check operator is /
 			else if(operator == '/')
 			{
-				if (number2 != 0) 
-				{
+				
 					result = number1 / number2;
 					System.out.println("The Divivsion is: " +result);
-				}
-	            else 
-	            {
-	            	System.out.println("Error: Division by zero is not allowed");
-	            }
 			}
 			
 			else
 			{
-				System.out.println("Error: Invalid operator!!");
+				//Throw the invalid operator exception
+				throw new Exception("Invalid operator!!");
 			}
 			
 		}
+		
+		//Catch block to handle ArithmeticException
 		catch(ArithmeticException e)
 		{
 			System.out.println("Error: " +e.getMessage());
+		}
+		
+		//To handle the invalid operator exception
+		catch(Exception e)
+		{
+			System.out.println("Error: "+e.getMessage());
 		}
 
 		//closing the scanner class object
