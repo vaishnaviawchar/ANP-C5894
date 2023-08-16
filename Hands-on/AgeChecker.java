@@ -21,10 +21,10 @@ public class AgeChecker
 			//if condition to check age is less than zero
 			if(age<0)
 			{
-				System.out.println("Error: Age cannot be negative");
+				throw new IllegalArgumentException("Please enter a valid age!! Age cannot be negative");
 			}
 			//if condition to check age is less than equal to 18
-		    if(age>=18)
+		        if(age>=18)
 			{
 				System.out.println("Yor are eligible for vote! ");
 			}
@@ -34,13 +34,17 @@ public class AgeChecker
 			}
 			
 		}
+	        
+		//Catch NumberFormatException to handle the non-numeric text
 		catch(NumberFormatException e)
 		{
 			System.out.println("Error: Please enter a valid numeric age.");
 		}
+		
+		//Catch IllegalArgumentException to handle negative number
 		catch (IllegalArgumentException e) 
 		{
-            System.out.println("Error: " + e.getMessage());
+			System.out.println("Error: " + e.getMessage());
 		}
 		
 		//closing the scanner class object
