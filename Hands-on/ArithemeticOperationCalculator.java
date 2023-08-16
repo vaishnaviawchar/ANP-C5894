@@ -20,47 +20,58 @@ public class ArithemeticOperationCalculator
 		//integer input for number2
 		int number2 = sc.nextInt();
 		
+		//Prompts user to select an operator
 		System.out.println("Available Operators: ");
 		System.out.println("1. + ");
 		System.out.println("2. - ");
 		System.out.println("3. * ");
 		System.out.println("4. / ");
 		System.out.println("Choose the Operator: ");
-	    char operator=sc.next().charAt(0);
-	    //Declaring variable result
+		
+		//character input for variable operator from user
+	        char operator=sc.next().charAt(0);
+	        
+		//Declaring variable result
 		int result;
 		
 		try
 		{
-			//if condition to check operator is +
+			//if condition to check operator is '+'
 			if(operator == '+')
 			{
+				//Performing Addition of two numbers
 				result= number1 + number2;
+				//Printing the result of addition.
 				System.out.println("The Addition is: "+result);
 			   
 			}
 			
-			//else if condition to check operator is -
+			//else if condition to check operator is '-'
 			else if(operator == '-')
 			{
+				//Performing the subtraction of of two numbers
 				result = number1 - number2;
+				//Printing the result of Subtraction
 				System.out.println("The Substraction is: " +result);
 			  
 			}
 			
-			//else if condition to check operator is *
+			//else if condition to check operator is '*'
 			else if(operator == '*')
 			{
-				 result= number1 * number2;
-				 System.out.println("The Multiplication is: " +result);
+				//Performing the multiplication of two numbers
+				result= number1 * number2;
+				//Printing the result of multiplication
+				System.out.println("The Multiplication is: " +result);
 		      
 			}
-			//else if condition to check operator is /
+			//else if condition to check operator is '/'
 			else if(operator == '/')
 			{
-				
-					result = number1 / number2;
-					System.out.println("The Divivsion is: " +result);
+				//Performing the Division of two numbers
+				result = number1 / number2;
+				//Printing the result of Division
+				System.out.println("The Divivsion is: " +result);
 			}
 			
 			else
@@ -80,11 +91,13 @@ public class ArithemeticOperationCalculator
 		//To handle the invalid operator exception
 		catch(Exception e)
 		{
-			System.out.println("Error: "+e.getMessage());
+			System.out.println("Error: " +e.getMessage());
 		}
 
+		finally
+		{
 		//closing the scanner class object
 		sc.close();
+		}
 	}
 
-}
