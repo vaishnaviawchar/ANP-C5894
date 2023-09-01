@@ -10,6 +10,7 @@ public class StackOperations
 {
 	public static void main(String[] args) 
 	{
+		//Creating Stack to store elements.
 		Stack<String> stack = new Stack<>();
 		
 		//Pushing the elements onto the stack
