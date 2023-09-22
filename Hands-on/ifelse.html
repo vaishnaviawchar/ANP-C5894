@@ -1,0 +1,32 @@
+<!DOCtype html>
+<html>
+<head>
+</head>
+<body>
+<p id="demo"></p>
+<form>
+<label for="Age">Age: </label><br>
+
+<input type="text" id="Age" name="Age"><br><br>
+<input type="button" value="button" onclick="myfunction()">
+</form>
+
+<script>
+function myfunction()
+{
+var age=document.getElementById("Age").value;
+let message;
+if(age<18)
+{
+message="you are not eligible for vote";
+}
+else
+{
+message="you are eligible for vote";
+}
+document.getElementById("demo").innerHTML=message;
+}
+
+</script>
+</body>
+</html>
