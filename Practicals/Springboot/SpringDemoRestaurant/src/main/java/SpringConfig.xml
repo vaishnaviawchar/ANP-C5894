@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<bean id="restaurantBean" class="com.spring.demo.Restuarant">
+<property name="welcomeNote" value="welcome to our restaurant"></property>
+<constructor-arg ref="coffe"></constructor-arg>
+
+
+</bean>
+<bean id="tea" class="com.spring.demo.Tea">
+
+</bean>
+<bean id="coffe" class="com.spring.demo.Coffee"></bean>
+</beans>
