@@ -1,0 +1,8 @@
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* This sets the height to 100% of the viewport height, making it full-screen centered. */
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5); 
+  }
+  

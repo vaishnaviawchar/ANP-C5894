@@ -1,0 +1,35 @@
+<div class="center-details">
+<h2>Employee-details</h2>
+<hr />
+<div *ngIf="employee">
+  <div>
+    <label><b>First Name:</b></label> {{ employee.firstName }}
+  </div>
+  <br>
+  <div>
+    <label><b>Last Name:</b></label> {{ employee.lastName }}
+  </div>
+  <br>
+  <div>
+    <label><b>Email ID:</b></label> {{ employee.emailId }}
+  </div>
+  <br>
+  <div>
+    <label><b>City:</b></label> {{ employee.city }}
+  </div>
+  <br>
+  <div>
+    <label><b>Salary:</b></label> {{ employee.salary}}
+  </div>
+   
+  <br>
+  <br>
+  <br>
+  <button (click)="updateEmployee()" class="btn btn-primary">Update</button>
+  <button (click)="deleteEmployee()" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+</div>
+</div>
+<br>
+<br>
+<a [routerLink]="['/employees']" class="btn btn-primary">Back to Employee List</a>
+

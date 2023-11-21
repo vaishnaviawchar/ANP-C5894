@@ -1,0 +1,22 @@
+<div class="center-details">
+<h2>Department-details </h2>
+<hr/>
+<div *ngIf="department">
+
+<div>
+    <label> <b> Department Name:</b></label> {{department.deptName}}
+    </div>
+    <br>
+    <div>
+        <label> <b> Number of Employees: </b></label> {{department.noofemployee}}
+    </div>
+    <br>
+    <br>
+     
+    <button (click) = "updateDepartment()" class = "btn btn-primary"> Update</button>
+    <button (click) = "deleteDepartment()" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+</div>
+</div>
+<br>
+<br>
+<a [routerLink]="['/departments']" class="btn btn-primary">Back to Department List</a>

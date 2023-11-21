@@ -1,0 +1,32 @@
+<div>
+  <input type="text" [(ngModel)]="searchName" placeholder="Enter Employee name">
+  <input type="text" [(ngModel)]="selectedCity" placeholder="Enter city">
+  <button (click)="searchEmployeesByName()">Search</button>
+</div>
+<h1 style="color:red; font-style: italic; font-size:30px; text-align: center;">Employee List</h1>
+<table class="attractive-table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Id</th>
+        <th>City</th>
+        <th>Salary</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>{{ employee.emailId }}</td>
+        <td>{{ employee.city }}</td>
+        <td>{{ employee.salary }}</td>
+        <td>
+            <button (click) = "employeeDetails(employee.id)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

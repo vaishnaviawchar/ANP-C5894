@@ -1,0 +1,20 @@
+<!-- admin-login.component.html -->
+<div class="container col-md-6" *ngIf="!(adminAuthService.isLoggedIn$ | async)">
+  <h1 style="color: black;">Admin Login</h1>
+  <form (ngSubmit)="loginAdmin()">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" class="form-control" id="username" name="username" [(ngModel)]="admin.username">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="admin.password">
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
+
+<!-- Add the following code to conditionally show the logout button -->
+<div *ngIf="adminAuthService.isLoggedIn$ | async">
+<button (click)="logoutAdmin()">Logout</button>
+</div>

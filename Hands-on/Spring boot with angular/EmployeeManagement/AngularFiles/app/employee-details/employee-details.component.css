@@ -1,0 +1,14 @@
+.center-details {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:lightblue; /* Set your desired background color here */
+  }
+  
+  .center-details h2 {
+    color: palevioletred;
+  }
+  
