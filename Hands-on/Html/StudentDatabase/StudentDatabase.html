@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--write a program to create web page using Form tags in Html for Student database.-->
+<html>
+<head>
+<title>Welcome to Student Database</title>
+</head>
+<body style="background-color:gray;">
+<h2 style="color:tomato; text-align:center;"><b><i> Student Database </i></h2>
+<form>
+<label for="fname"> Enter a First name: </label><br>
+<input type="text" id="fname" name="fname"> <br><br>
+
+<label for="lname"> Enter a Last name: </label><br>
+<input type="text" id="lname" name="lname"> <br><br>
+
+<label for="fname"> Enter a Age: </label><br>
+<input type="text" id="Age" name="Age"> <br><br>
+
+<label for="mobile">Enter a mobile number:</label>
+<input type="tel" id="mobile" name="mobile" placeholder="1234567890" pattern="[0-9]{10}" required><br><br>
+
+<label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email"><br><br>
+
+<p> Choose your Gender: </p>
+<input type="radio" id="Female" name="Gender" value="Female">
+  <label for="Female">Female</label><br>
+  <input type="radio" id="Male" name="Gender" value="Male">
+  <label for="Male">Male</label><br>
+  <input type="radio" id="Other" name="Gender" value="Gender">
+  <label for="Other">Other</label><br><br>
+  
+  <p>Choose your favorite Web language:</p>
+   <input type="checkbox" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="checkbox" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="checkbox" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label><br><br>
+  
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
