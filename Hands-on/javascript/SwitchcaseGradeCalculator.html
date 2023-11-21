@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h2>JavaScript switch loop</h2>
+
+<p id="demo"></p>
+<form>
+  <label for="Grade">Enter a Grade:</label><br>
+  <input type="text" id="Grade" name="Grade"><br><br>
+  <input type="button" value="button" onclick="myFunction()">
+</form>
+
+<script>
+function myFunction() {
+  let grade = document.getElementById("Grade").value;
+  let lettergrade;
+  let message;
+
+  if (grade >= 0 && grade <= 100) {
+    switch (Math.floor(grade / 10)) {
+      case 10:
+      case 9:
+        lettergrade = "A";
+        break;
+
+      case 8:
+        lettergrade = "B";
+        break;
+
+      case 7:
+        lettergrade = "C";
+        break;
+
+      default:
+        lettergrade = "E";
+        break;
+    }
+    document.getElementById("demo").innerHTML = "Letter grade is: " + lettergrade;
+  } else {
+    message = "Invalid grade. Please enter a grade between 0 and 100.";
+    document.getElementById("demo").innerHTML = message;
+  }
+}
+</script>
+</body>
+</html>
