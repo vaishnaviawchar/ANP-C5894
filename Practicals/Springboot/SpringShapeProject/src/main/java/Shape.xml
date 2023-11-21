@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ <bean id="circle" class="com.spring.demo.Circle">
+ <constructor-arg value="pink"></constructor-arg>
+ </bean>
+ 
+ <bean id="rectangle" class="com.spring.demo.Rectangle">
+ <property name="color" value="blue"></property>
+ </bean>
+ 
+ <bean id="painter" class="com.spring.demo.Painter">
+ <constructor-arg ref="circle"></constructor-arg>
+ </bean>
+ 
+ <bean id="dance" class="com.spring.demo.Dancer"></bean>
+ </beans>
