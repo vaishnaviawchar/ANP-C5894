@@ -1,0 +1,81 @@
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* This sets the height to 100% of the viewport height, making it full-screen centered. */
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5); 
+  }
+  .custom-background {
+    background: linear-gradient(45deg, #2d6ef0, #c545ef);
+    background-color: #8c00ff;
+    color: rgb(11, 8, 8); 
+    font-size: 18px;
+    text-align: center;
+    padding: 20px; 
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2); 
+    border-bottom: 5px solid #ee33ff; /* Border at the bottom */
+  }
+
+  /*body {
+    background-image: url('assets/img.jpg'); /* Replace with the actual path to your image file 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }*/
+  .footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, #3d73de, #bf00ff); /* Gradient background */
+    text-align: center;
+    color: rgb(11, 8, 8);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #ee33ff; /* Border at the top */
+    box-shadow: 0px -5px 10px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow at the top */
+  }
+  form {
+    padding: 60px; /* Adjust the padding value as needed */
+  }
+  
+ /* Add this to your existing CSS or external stylesheet */
+
+body::-webkit-scrollbar {
+  width: 1em; /* Set a small width for the scrollbar track */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the color of the scrollbar thumb */
+}
+
+/*body {
+  scrollbar-width: thin; /* Firefox scrollbar width 
+  scrollbar-color: #888 transparent; Firefox scrollbar color
+}*/
+
+/* Optionally, add some padding to the right to prevent content from being hidden behind the scrollbar */
+body {
+  padding-right: 2px;
+}
+/* Increase the width of the scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Adjust the width of the scrollbar thumb */
+  width: 1em;
+}
+
+/* Optionally, add some subtle gradient or shadow to indicate scrollability */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 10px; /* Adjust the width as needed */
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #fff 50%, #fff 100%); /* Subtle gradient on the right */
+  pointer-events: none; /* Ensure this overlay doesn't block interactions */
+  z-index: 9999; /* Make sure it's above other elements */
+}

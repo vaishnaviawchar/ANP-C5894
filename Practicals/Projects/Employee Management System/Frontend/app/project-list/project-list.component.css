@@ -1,0 +1,21 @@
+.footer {
+    background-color: #343a40; /* Dark background color */
+    color: white; /* Text color */
+    padding: 10px 0; /* Padding for top and bottom */
+    text-align: center; /* Center-align text */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 960px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .footer span {
+    font-size: 14px; /* Adjust font size as needed */
+  }
+  
+  /* Add additional styles if needed */
+  

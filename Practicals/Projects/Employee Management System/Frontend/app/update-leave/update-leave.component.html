@@ -1,0 +1,67 @@
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; box-sizing: border-box; background-image: url('assets/3.avif'); background-position: center; background-size: cover; background-attachment: fixed; height: 100vh;">
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+        
+    <a style="color: white;" class="navbar-brand" href="#">Employee Management</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+            <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/leave-list">Back</a>
+        </li>
+           
+          </ul>
+  
+      
+    </div>
+  </nav>
+  <br>
+  <br>
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Update leave </h3>
+            <hr />
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label> Employee Id</label>
+                        <input type="text" class="form-control" id="firstName" [(ngModel)]="leave.leaveId"
+                            name="leaveId">
+                    </div>
+
+                    <div class="form-group">
+                        <label> Reason</label>
+                        <input type="text" class="form-control" id="reason" [(ngModel)]="leave.reason"
+                            name="reason">
+                    </div>
+
+                    <div class="form-group">
+                        <label> From Date</label>
+                        <input type="text" class="form-control" id="fromDate" [(ngModel)]="leave.fromDate"
+                            name="fromDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label> toDate </label>
+                        <input type="text" class="form-control" id="toDate" [(ngModel)]="leave.toDate"
+                            name="toDate">
+                    </div>
+                    <br />
+                    <button class="btn btn-success" type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+      <span>Project By @nand & $hivam #2023 </span>
+    </div>
+  </footer>
+
+</body>

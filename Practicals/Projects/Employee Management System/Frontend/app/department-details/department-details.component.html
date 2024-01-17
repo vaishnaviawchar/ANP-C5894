@@ -1,0 +1,59 @@
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; box-sizing: border-box; background-image: url('assets/2.jpg'); background-position: center; background-size: cover; background-attachment: fixed; height: 100vh;">
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+        
+  <a style="color: white;" class="navbar-brand" href="#">Employee Management</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      
+      <li class="nav-item">
+          <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/home">Back</a>
+      </li>
+         
+        </ul>
+
+    
+  </div>
+</nav>
+<hr>
+<hr>
+<div class="center-details">
+<h2>Department-details </h2>
+<hr/>
+<div *ngIf="department">
+
+<div>
+    <label> <b> Department Name:</b></label> {{department.deptName}}
+    </div>
+    <br>
+    <div>
+        <label> <b> Number of Employees: </b></label> {{department.noofemployee}}
+    </div>
+    <br>
+    <br>
+      
+        <!-- Display associated employees -->
+        <div *ngIf="department.employees && department.employees.length > 0">
+          <h3>Associated Employees:</h3>
+          <ul>
+            <li *ngFor="let employee of department.employees">
+              {{ employee.firstName }} {{ employee.lastName }} - {{ employee.emailId }}
+            </li>
+          </ul>
+        </div>
+      
+    <button (click) = "updateDepartment()" class = "btn btn-primary"> Update</button>
+    <button (click) = "deleteDepartment()" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+</div>
+</div>
+<br>
+<br>
+<a [routerLink]="['/departments']" class="btn btn-primary">Back to Department List</a>
+<footer class="footer">
+  <div class="container">
+    <span>Project By @nand & $hivam #2023 </span>
+  </div>
+</footer>
+</body>

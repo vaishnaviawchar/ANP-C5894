@@ -1,0 +1,57 @@
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; box-sizing: border-box; background-image: url('assets/2.jpg'); background-position: center; background-size: cover; background-attachment: fixed; height: 100vh;">
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+        
+    <a style="color: white;" class="navbar-brand" href="#">Employee Management</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a routerLink="/create-department" routerLinkActive="active" class="nav-link" style="color: white;">Add Department</a>
+          </li>
+        <li class="nav-item">
+            <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/home">Back</a>
+        </li>
+           
+          </ul>
+  
+      
+    </div>
+  </nav>
+  <hr>
+  <hr>
+<div>
+    <input type="text" [(ngModel)]="searchName" placeholder="Enter department name">
+    <button (click)="searchDepartmentsByName()">Search</button>
+  </div>
+<div class = "row">
+    <h2 style="color:black; font-style: italic; font-size:30px; text-align: center;">Department List</h2>
+</div>
+
+<table class = "attractive-table">
+    <thead>
+        <tr>
+            <th> Department Name</th>
+            <th>  Number of Employees</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let department of departments" >
+            <td> {{ department.deptName }} </td>
+            <td> {{ department.noofemployee}} </td>
+          
+            <td>
+               
+                <button (click) = "departmentDetails(department.id)" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<footer class="footer">
+  <div class="container">
+    <span>Project By @nand & $hivam #2023 </span>
+  </div>
+</footer>
+</body>

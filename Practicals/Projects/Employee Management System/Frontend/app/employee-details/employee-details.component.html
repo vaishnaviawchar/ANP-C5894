@@ -1,0 +1,68 @@
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; box-sizing: border-box; background-image: url('assets/1.avif'); background-position: center; background-size: cover; background-attachment: fixed; height: 100vh;">
+  <nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+          
+    <a style="color: white;" class="navbar-brand" href="#">Employee Management</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        <li class="nav-item">
+            <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/employees">Back</a>
+        </li>
+           
+          </ul>
+  
+      
+    </div>
+  </nav>
+
+<div class="center-details">
+  <h2>Employee-details</h2>
+  <hr />
+  <div *ngIf="employee">
+    <div>
+      <label><b>Employee Id</b></label> {{ employee.emp_id}}
+    </div>
+    <div>
+      <label><b>First Name:</b></label> {{ employee.firstName }}
+    </div>
+    <br>
+    <div>
+      <label><b>Last Name:</b></label> {{ employee.lastName }}
+    </div>
+    <br>
+    <div>
+      <label><b>Email ID:</b></label> {{ employee.emailId }}
+    </div>
+    <br>
+    <div>
+      <label><b>City:</b></label> {{ employee.city }}
+    </div>
+    <br>
+    <div>
+      <label><b>Salary:</b></label> {{ employee.salary }}
+    </div>
+
+    <div *ngIf="department">
+      <label><b>Department Name:</b></label> {{department.deptName}}
+      
+      <!-- Add other department details here as needed -->
+    </div>
+    
+    
+    <br>
+    <button (click)="updateEmployee()" class="btn btn-primary">Update</button>
+    <button (click)="deleteEmployee()" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+  </div>
+  <br>
+  
+  <a [routerLink]="['/employees']" class="btn btn-primary">Back to Employee List</a>
+</div>
+<footer class="footer">
+  <div class="container">
+    <span>Project By @nand & $hivam #2023 </span>
+  </div>
+</footer>
+</body>
