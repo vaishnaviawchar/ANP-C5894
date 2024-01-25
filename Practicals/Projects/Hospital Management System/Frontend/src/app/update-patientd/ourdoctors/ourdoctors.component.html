@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+       .my-card {
+            height: 100%;
+            text-align: center;
+            background-color: lightgrey;
+            overflow: hidden; /* Hide overflowing content */
+        }
+
+        .my-card img {
+            object-fit: cover;
+            max-height: 100%;
+            margin: 0 auto;
+        }
+
+        /* Hover effect */
+        .my-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+        }
+        .my-card:hover img {
+    transform: scale(1.2); /* You can adjust the scaling factor as needed */
+}
+    </style>
+</head>
+<body style="background-image: url('assets/stetho.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center center;margin: 0;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">HOSPITAL</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);" routerLink="/patient-dash">Back</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container my-4">
+    <h1 style="text-align: center; color: darkred; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-style: oblique;">Our Doctors</h1>
+    <div class="row mb-2">
+        <div class="col-md-4">
+            <div class="my-card row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    
+                    <div class="mb-auto">
+                        <img class="bd-placeholder-img" width="250" height="250" src="assets/doctor1.jpg" alt="Dr. Naina Kapoor">
+                    </div>
+                    <h3 class="mb-5 mt-3" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; background-color: lightblue;">Dr. Naina Kapoor</h3>
+                    <p class="card-text mb-2" style="font-family: 'Times New Roman', Times, serif; font-weight: bold; background-color: lightpink; font-size: larger;">Experienced cardiologist with a passion for patient care.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="my-card row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                   
+                    <div class="mb-auto">
+                        <img class="bd-placeholder-img" width="250" height="250" src="assets/doctor5.jpg" alt="Dr. Another Doctor">
+                    </div>
+                    <h3 class="mb-5 mt-3" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; background-color:lightblue;">Dr. Vikram Desai </h3>
+                    <p class="card-text mb-2" style="font-family: 'Times New Roman', Times, serif; font-weight: bold; background-color: lightpink; font-size: larger;">Expert in the Neurology field, dedicated to patient well-being.</p>
+                </div>
+            </div>
+        </div>
+    
+
+<div class="col-md-4">
+    <div class="my-card row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            
+            <div class="mb-auto">
+                <img class="bd-placeholder-img" width="250" height="250" src="assets/doctor3.jpeg" alt="Dr. Another Doctor">
+            </div>
+            <h3 class="mb-5 mt-3" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; background-color: lightblue;">Dr. Ananya Reddy</h3>
+            <p class="card-text mb-2" style="font-family: 'Times New Roman', Times, serif; font-weight: bold; background-color: lightpink; font-size: larger;">Expert in the field of Dermatology, dedicated to patient well-being.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="my-card row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+           
+            <div class="mb-auto">
+                <img class="bd-placeholder-img" width="250" height="250" src="assets/doctor4.jpeg" alt="Dr. Another Doctor">
+            </div>
+            <h3 class="mb-6 mt-3" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; background-color:lightblue;">Dr. Anjali Kapoor</h3>
+            <p class="card-text mb-2" style="font-family: 'Times New Roman', Times, serif; font-weight: bold; background-color: lightpink; font-size: larger;">Expert in the Obstetrics and Gynecology field, dedicated to patient well-being.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="my-card row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            
+            <div class="mb-auto">
+                <img class="bd-placeholder-img" width="250" height="250" src="assets/doctor2.jpeg" alt="Dr. Another Doctor">
+            </div>
+            <h3 class="mb-5 mt-3" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; background-color: lightblue;">Dr. Rajesh Verma</h3>
+            <p class="card-text mb-2" style="font-family: 'Times New Roman', Times, serif; font-weight: bold; background-color: lightpink; font-size: larger;">Expert in the Psychiatry field, dedicated to patient well-being.</p>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="my-card row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            
+            <div class="mb-auto">
+                <img class="bd-placeholder-img" width="250" height="250" src="assets/doctor7.jpeg" alt="Dr. Another Doctor">
+            </div>
+            <h3 class="mb-5 mt-3" style="font-family: Arial, Helvetica, sans-serif; font-weight: bold; background-color:lightblue;">Dr. Kavya Singh</h3>
+            <p class="card-text mb-2" style="font-family: 'Times New Roman', Times, serif; font-weight: bold; background-color: lightpink; font-size: larger;">Expert in the Ophthalmology field, dedicated to patient well-being.</p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<footer class="text-center text-white mt-5">
+    &copy; 2023 Hospital. All rights reserved.
+</footer>
+
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

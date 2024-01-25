@@ -1,0 +1,48 @@
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; box-sizing: border-box; background-image: url('assets/ss.jpg'); background-position: center; background-size: cover; background-attachment: fixed; height: 100vh;">
+<nav class="navbar navbar-expand-lg bg-dark">
+  <a class="navbar-brand" style="color: white;" href="#">HOSPITAL</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" style="color: white;" aria-current="page" href="javascript:void(0);" routerLink="/docdash">Back</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<hr>
+<hr>
+<hr>
+
+<div class="container">
+  <h2 style="color: darkred;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-weight: bold;">Patient Diagnosis Details</h2>
+  <div>
+    <div>
+      <h4><b>Name:</b> {{ patient.name }}</h4>
+    </div>
+
+    <div>
+      <p><b>Age:</b> {{ patient.age }}</p>
+    </div>
+
+    <div>
+      <p><b>Blood Type:</b> {{ patient.blood }}</p>
+    </div>
+
+    <div>
+      <p><b>Dosage:</b> {{ patient.dose }}</p>
+    </div>
+
+    <div>
+      <p><b>Urgency:</b> {{ patient.urgency }}</p>
+    </div>
+
+    <div>
+      <p><b>Detailed Diagnosis & Prescription:</b> {{ patient.prescription }}</p>
+    </div>
+  </div>
+</div>
+</body>
