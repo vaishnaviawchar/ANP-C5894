@@ -1,0 +1,80 @@
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; box-sizing: border-box; background-image: url('assets/75.jpg'); background-position: center; background-size: cover; background-attachment: fixed; height: 100vh;">
+
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+        
+    <a style="color: white;" class="navbar-brand" href="#">HOSPITAL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      
+        
+       
+        
+        <li class="nav-item">
+          <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/medicine-listd">View Medicines</a>
+        </li>
+  
+        
+        
+        
+        
+      </ul>
+  
+      <div class="mx-2">
+        
+        <button style="margin: 5px;"class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a style="color:white;" href="javascript:void(0);" routerLink="/home">Logout</a></button>
+        
+    </div>
+      
+    </div>
+  
+  </nav>
+  <div class="grid">
+    <div class="container">
+      <hr>
+      <hr>
+      <hr>
+      <h2 style="color: darkgreen;text-align: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Doctor Dashboard</h2>
+      <a style="color: rgb(91, 50, 50); font-size: x-large;font-weight: bold;"><marquee behavior="scroll" direction="left">
+        Welcome to Dashboard. Please find the patient list available below!!. Click Add Patient to Add patients, Click View Medicines to view and update Medicines</marquee></a>
+      <hr>
+      <input type="text" name="search" [(ngModel)]=" searchText" placeholder="Search">
+      <button (click)="searchPatients()">Search</button>
+      <br>
+      <a style="color: rgb(159, 21, 21); font-size: xx-large; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-weight: bold;">
+        Current Patient List in your Queue
+      </a>
+      <div class="tableFixHead">
+        <br>
+        <table class="attractive-table">
+          <thead class="table-header">
+            <tr>
+              <th>Id</th>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Blood type</th>
+              <th>Remark</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let patient of patients">
+              <td>{{patient.id}}</td>
+              <td>{{patient.name}}</td>
+              <td>{{patient.age}}</td>
+              <td>{{patient.blood}}</td>
+              <td>{{patient.prescription}}</td>
+            
+              <td>
+                <button (click)="updatePatient(patient.id)" class="btn custom-button">Remark</button>
+                <button (click)="viewPatient(patient.id)" class="btn btn-success" style="margin-left: 10px;">View</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>

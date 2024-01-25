@@ -1,0 +1,65 @@
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; box-sizing: border-box; background-image: url('assets/me.jpg'); background-position: center; background-size: cover; background-attachment: fixed; height: 100vh;">
+
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">HOSPITAL</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a style="color: white;"class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/admindash">Back</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="javascript:void(0);" routerLink="/create-medicine">Add Medicines</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="javascript:void(0);" routerLink="/home">Home</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container">
+  <hr>
+  <hr>
+  <hr>
+<h2 style="color: darkgreen;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: center;font-weight: bold;">Medicine List</h2>
+<hr>
+<marquee behavior="scroll" direction="left" style="color: rgb(9, 42, 163); font-size: x-large; font-weight: bold;">
+  Welcome to Medicine list page. Click Add Medicines to Add medicines
+</marquee>
+<hr>
+<table class="attractive-table">
+
+    <thead class="table-header">
+        <tr>
+            
+            <th> Drug Name </th>
+            <th> Stock </th>
+            <th> Action </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let medicine of medicines">
+           
+            <td> {{ medicine.drugName }} </td>
+            <td> {{ medicine.stock }} </td>
+
+            <td>
+                <button (click)="updateMedicine(medicine.id)" class="btn btn-info"> Update </button>
+                <button (click)="deleteMedicine(medicine.id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>
+        
+</table>
+</div>
+</body>
+
